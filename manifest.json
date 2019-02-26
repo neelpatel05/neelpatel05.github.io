@@ -1,0 +1,16 @@
+{
+    "name": "Neel Patel",
+    "short_name": "Neel Patel",
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "icons": [
+      {
+        "src": "file/neel.gif",
+        "sizes": "342*340",
+        "type": "image/gif"
+      }
+    ],
+    "background_color": "#FFFFFF"
+  }

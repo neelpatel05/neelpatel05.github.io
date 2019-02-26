@@ -5,6 +5,7 @@ data={
 }
 
 window.onload = function(){
+    console.log("Hey there developer!")
     scramble1()
 }
 
