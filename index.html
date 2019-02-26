@@ -28,6 +28,20 @@
   <script src="js/scramble.min.js"></script>
   <title>Neel Patel</title>
 
+  <script>
+    window.addEventListener('load', async e => {
+      if ('serviceWorker' in navigator) {
+          try {
+              navigator.serviceWorker.register('serviceworker.js');
+              console.log('SW registered');
+
+          } catch (error) {
+              console.log('SW failed');
+
+          }
+      }
+    });
+  </script>
   <style type="text/css">
     @font-face {
       font-family: Avenir;
@@ -136,19 +150,6 @@
       document.body.removeChild(dummy);
       alert("PGP Key copied to clipboard")
     }
-    window.addEventListener('load', async e => {
-      await fetchTrending();
-      if ('serviceWorker' in navigator) {
-          try {
-              navigator.serviceWorker.register('serviceWorker.js');
-              console.log('SW registered');
-
-          } catch (error) {
-              console.log('SW failed');
-
-          }
-      }
-    });
   </script>
 </body>
 </html>
