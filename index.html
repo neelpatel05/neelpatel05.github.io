@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/gif" sizes="342*340" href="file/neel.gif">
   <link rel="apple-touch-icon" type="image/gif" sizes="342*340" href="file/neel.gif">
-  
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -133,6 +133,19 @@
       document.body.removeChild(dummy);
       alert("PGP Key copied to clipboard")
     }
+    window.addEventListener('load', async e => {
+      await fetchTrending();
+      if ('serviceWorker' in navigator) {
+          try {
+              navigator.serviceWorker.register('serviceWorker.js');
+              console.log('SW registered');
+
+          } catch (error) {
+              console.log('SW failed');
+
+          }
+      }
+    });
   </script>
 </body>
 </html>
