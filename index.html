@@ -21,8 +21,10 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdpPHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   <script src="js/scramble.min.js"></script>
+
+  <link href="style.css" rel="stylesheet">
   <title>Neel Patel</title>
 
   <script>
@@ -37,76 +39,18 @@
       }
     });
   </script>
-  <style type="text/css">
-    @font-face {
-      font-family: Avenir;
-      src: url("files/AvenirLTStd-Book.otf");
-    }
-    a {
-      color: #1772d0;
-      text-decoration:none;
-    }
-    a:focus, a:hover {
-      color: #ff0000;
-      text-decoration:none;
-    }
-    span {
-      color: #1772d0;
-      text-decoration:none;
-    }
-    span:focus, span:hover {
-      color: #ff0000;
-      text-decoration:none;
-    }
-    body,td,th {
-      font-family: 'Avenir', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -o-user-select: none;
-      user-select: none;
-    }
-    
-    #name{
-      font-size: 2rem;
-    }
-    #table{
-      width: 60%;
-      border: 0;
-      text-align: center;
-      margin-top: 100px;
-    }
-    img{
-      border-radius: 50%;
-      border-style: dotted;
-      border-width: 0;
-      width: 20%
-    }
-    @media only screen and (max-width: 800px) {
-      #table{
-        width:90%;
-        margin-top: 50px;
-      }
-      img{
-        width: 40%;
-      }
-    }
-  </style>
 </head>
 <body>
-  <div class="container" width="100%" align="center">
+  <div class="container" width="100%" align="center" style="margin-bottom: 30px">
     <table id="table" class="table-responsive" border="0">
       <tbody>
           <tr>
-              <td>
-                <img src="files/neel.gif" alt="Profile Image">
-              </td>
+              <td><img src="files/neel.gif" alt="Profile Image" id="profileimg"></td>
           </tr>
         <tr>
           <td>
             <p align="center"><p id="name">Neel Patel</p>
-            Email:
+Email:
             <font style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;&nbsp;<br>(Get your PGP key <span onclick="copyToClipboard()">here</span>)</font>
             </p>
             <table width="100%" align="center" border="0">
@@ -122,8 +66,45 @@
             <table width="100%" align="center" border="0">
               <tbody>
                 <tr>
-                  <td width="50%">
-                    <p align="left"><font size="3"> <a href="https://drive.google.com/file/d/1URmZjS9v-pBNKxrrOMVxeQA2h4DDtPaJ/view?usp=sharing">Resume</a> &nbsp;|&nbsp; <a href="https://github.com/neelpatel05/">Github</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/neelkumarpatel">LinkedIn</a></font></p>
+                  <td width="50%"><p align="left"><font size="3"> <a href="https://drive.google.com/file/d/1URmZjS9v-pBNKxrrOMVxeQA2h4DDtPaJ/view?usp=sharing">Resume</a> &nbsp;|&nbsp; <a href="https://github.com/neelpatel05/">Github</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/neelkumarpatel">LinkedIn</a></font></p></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <table width="100%" align="center" border="0" valign="middle">
+              <tbody>
+                <tr>
+                  <td><p style="font-size: 1.4rem;float: left">Projects</p><p style="float: right;margin-top: 5px">(more on github)</p></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="card-group">
+                      <div class="row">
+                        <div class="column">
+                          <div class="card" style="vertical-align: middle">
+                            <a><span>Anti-Smokify Smoking Detection</span></a>
+                          </div>
+                        </div>
+                      
+                        <div class="column">
+                          <div class="card">
+                            <a><span>Eyeball Controlled Wheelchair</span></a>
+                          </div>
+                        </div>
+                        
+                        <div class="column">
+                          <div class="card">
+                            <span>eAttend - Location based attendance</span>
+                          </div>
+                        </div>
+                        
+                        <div class="column">
+                          <div class="card">
+                            <span>GitHub Profile</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
