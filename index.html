@@ -17,9 +17,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/gif" sizes="342*340" href="file/neel.gif">
   <link rel="apple-touch-icon" type="image/gif" sizes="342*340" href="file/neel.gif">
-  <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
-    integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
-    crossorigin="anonymous"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -33,11 +30,9 @@
       if ('serviceWorker' in navigator) {
           try {
               navigator.serviceWorker.register('serviceworker.js');
-              console.log('SW registered');
-
+              console.log('SW registered')
           } catch (error) {
               console.log('SW failed');
-
           }
       }
     });
@@ -112,7 +107,7 @@
           <td>
             <p align="center"><p id="name">Neel Patel</p>
             Email:
-            <font id="email" style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;&nbsp;<br>(Get your PGP key <span onclick="copyToClipboard()">here</span>)</font>
+            <font style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;&nbsp;<br>(Get your PGP key <span onclick="copyToClipboard()">here</span>)</font>
             </p>
             <table width="100%" align="center" border="0">
               <tbody>
