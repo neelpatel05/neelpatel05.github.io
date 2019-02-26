@@ -2,7 +2,12 @@
 <html lang="en-US">
   <link rel="shortcut icon" type="image/x-icon" href="files/favicon.png">
   <meta name="description" content="personal website"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   <title>Neel Patel</title>
 
   <style type="text/css">
@@ -18,6 +23,14 @@
       color: #ff0000;
       text-decoration:none;
     }
+    span {
+      color: #1772d0;
+      text-decoration:none;
+    }
+    span:focus, span:hover {
+      color: #ff0000;
+      text-decoration:none;
+    }
     body,td,th {
       font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
       font-size: 16px;
@@ -27,6 +40,31 @@
       -o-user-select: none;
       user-select: none;
     }
+    
+    #name{
+      font-size: 2rem;
+    }
+    #table{
+      width: 60%;
+      border: 0;
+      text-align: center;
+      margin-top: 100px;
+    }
+    img{
+      border-radius: 50%;
+      border-style: dotted;
+      border-width: 0;
+      width: 20%
+    }
+    @media only screen and (max-width: 800px) {
+      #table{
+        width:90%;
+        margin-top: 50px;
+      }
+      img{
+        width: 40%;
+      }
+    }
   </style>
   <script>
     window.onload = function(){
@@ -35,40 +73,44 @@
   </script>
 </head>
 <body>
-  <table width="840" border="0" align="center" cellspacing="0" cellpadding="20" style="margin-top: 100px">
-    <tbody>
-      <tr>
-        <td>
-          <p align="center"><font size="7">Neel Patel</font><br>
-          Email:
-          <font id="email" style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;&nbsp;(Get your PGP key <a onclick="copyToClipboard()">here</a>)</font>
-          </p>
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <td width="67%" valign="middle" align="justify">
-                  <p>I am a final year Bachelors student in Information Technology at <a href="http://bvmengineering.ac.in/">Birla Vishvakarma Mahavidyalaya</a>. My primary interests are in Networking and Security, Backend Development and a little bit in Machine Learning.</p>
-                  <p>I am currently working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> for a period 0f 4 months. At OpenEyes, I am working with a team-mate to develop a ML based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. For our project, we are using <a>Flask</a>, <a>Python</a>, <a>AWS</a> for Backend and <a>ResNet50</a>, <a>Yolo3</a> models for Transfer Learning to predict the frames.</p>
-                </td>
-                <td width="33%">
-                  <img src="files/neel.gif" alt="Profile Image" style="border-radius: 50%;border-style: dotted;border-width: 0" width="100%">
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <td width="50%">
-                  <p align="left"><font size="3"> <a href="https://drive.google.com/file/d/1URmZjS9v-pBNKxrrOMVxeQA2h4DDtPaJ/view?usp=sharing">Resume</a> &nbsp;|&nbsp; <a href="https://github.com/neelpatel05/">Github</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/neelkumarpatel">LinkedIn</a></font></p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container" width="100%">
+    <table id="table" class="table-responsive" align="center">
+      <tbody>
+          <tr>
+              <td>
+                <img src="files/neel.gif" alt="Profile Image">
+              </td>
+          </tr>
+        <tr>
+          <td>
+            <p align="center"><p id="name"></font>Neel Patel</p>
+            Email:
+            <font id="email" style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;&nbsp;<br>(Get your PGP key <span onclick="copyToClipboard()">here</span>)</font>
+            </p>
+            <table width="100%" align="center" border="0">
+              <tbody>
+                <tr >
+                  <td width="100%" valign="middle" align="justify">
+                    <p>I am a final year Bachelors student in Information Technology at <a href="http://bvmengineering.ac.in/">Birla Vishvakarma Mahavidyalaya</a>. My primary interests are in Networking and Security, Backend Development and a little bit in Machine Learning.</p>
+                    <p>I am currently working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> for a period of 4 months. At OpenEyes, I am working with a team-mate to develop a ML based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. For our project, we are using <span>Flask</span>, <span>Python</span>, <span>AWS</span> for Backend and <span>ResNet50</span>, <span>Yolo3</span> models for Transfer Learning to predict the frames.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table width="100%" align="center" border="0">
+              <tbody>
+                <tr>
+                  <td width="50%">
+                    <p align="left"><font size="3"> <a href="https://drive.google.com/file/d/1URmZjS9v-pBNKxrrOMVxeQA2h4DDtPaJ/view?usp=sharing">Resume</a> &nbsp;|&nbsp; <a href="https://github.com/neelpatel05/">Github</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/neelkumarpatel">LinkedIn</a></font></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <script>
     function copyToClipboard(){
       text=`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=X8cX`
