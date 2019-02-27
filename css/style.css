@@ -20,6 +20,7 @@
   }
   body,td,th {
     font-family: 'Avenir', Verdana, Helvetica, sans-serif;
+    overflow-x: hidden;
     font-size: 16px;
     -webkit-user-select: none;
     -khtml-user-select: none;
