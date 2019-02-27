@@ -1,6 +1,6 @@
 const staticAssets = [
-    'scramble.min.js',
-    'script.js',
+    'js/scramble.min.js',
+    'js/script.js',
 ];
 
 self.addEventListener('install', async event => {
