@@ -44,7 +44,7 @@
     border-width: 0;
     width: 20%;
   }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1024px) {
     #table{
       width:90%;
       margin-top: 50px;
@@ -55,6 +55,12 @@
     }
     #bvm{
       width:10%;
+    }
+    #chai{
+      width: 8%;
+    }
+    #lamp{
+      display: none;
     }
   }
 
@@ -80,11 +86,14 @@
     clear: both;
   }
   
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     .column {
       width: 50%;
       display: block;
       margin-bottom: 20px;
+    }
+    .card{
+      width: 100%;
     }
   }
   
