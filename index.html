@@ -147,8 +147,8 @@
                                   <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                                   <p class="badge badge-secondary" id="commits">commits : {{post.numberofcommits}}</p>
                                   <br>
-                                  <ol v-for="commit in post.commits" style="float:left">
-                                      <li>{{commit.message}}</li>
+                                  <ol style="float:left">
+                                      <li v-for="commit in post.commits">{{commit.message}}</li>
                                   </ol>
                                 </div>
                             </div>
