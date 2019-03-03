@@ -1,3 +1,5 @@
+var globaldata;
+
 var app = new Vue({
     el: '#app',
     created() {
@@ -9,12 +11,13 @@ var app = new Vue({
     methods:{
         fetchData() {
             axios.get('https://api.github.com/users/neelpatel05/events').then(response => {
-                for(var i=0;i<10;i++){
+                for(var i=0;i<5;i++){
                     var name=response.data[i].repo.name.split("/")
                     var createdate=response.data[i].created_at.split("T")
                     var createdate1=createdate[0].split("-")
                     var createdate2=createdate1.reverse().join("-")
                     if (response.data[i].type == "PushEvent"){
+                        
                         var data={
                             "created_at":createdate2,
                             "name":name[1],
@@ -40,3 +43,4 @@ var app = new Vue({
         }
     }
   })
+
