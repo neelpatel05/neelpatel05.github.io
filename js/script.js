@@ -9,6 +9,7 @@ data={
 window.onload = function(){
     console.log("Hey there developer!")
     scramble1()
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
 }
 
 

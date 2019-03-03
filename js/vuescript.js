@@ -6,11 +6,14 @@ var app = new Vue({
         this.fetchData();	
     },
     data: {
-      posts:[]
+      posts:[],
+      time:''
     },
     methods:{
         fetchData() {
             axios.get('https://api.github.com/users/neelpatel05/events').then(response => {
+                var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+                this.time=loadTime
                 for(var i=0;i<5;i++){
                     var name=response.data[i].repo.name.split("/")
                     var createdate=response.data[i].created_at.split("T")
