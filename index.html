@@ -147,13 +147,10 @@
                                   <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                                   <p class="badge badge-secondary" id="commits">commits : {{post.numberofcommits}}</p>
                                   <br>
-                                  <ol v-for="commit in post.commits">
+                                  <ol v-for="commit in post.commits" style="float:left">
                                       <li>{{commit.message}}</li>
                                   </ol>
                                 </div>
-                              <div class="card-action">
-                                <a href="#"></a>
-                              </div>
                             </div>
                           </div>
                       </div>
