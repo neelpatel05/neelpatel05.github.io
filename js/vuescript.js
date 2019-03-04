@@ -1,12 +1,12 @@
 var app = new Vue({
-    el: '#app',
+    el: '#table',
     created() {
         this.fetchData();
     },
     data: {
       posts:[],
       time:'',
-      repos:[],
+      repos:[]
     },
     methods:{
         fetchData() {
@@ -22,6 +22,8 @@ var app = new Vue({
                     this.time=loadTime
                     
                     //Event Response
+                    console.log(eventresponse.headers["x-ratelimit-remaining"])
+                    console.log(reporesponse.headers["x-ratelimit-remaining"])
                     for(var i=0;i<5;i++){
                         var name=eventresponse.data[i].repo.name.split("/")
                         var createdate=eventresponse.data[i].created_at.split("T")
@@ -61,6 +63,7 @@ var app = new Vue({
                                 "description":reporesponse.data[i].description,
                                 "url":reporesponse.data[i].html_url,
                                 "language":reporesponse.data[i].language,
+                                "languages":{}
                             }
                             languagesurl.push(reporesponse.data[i].languages_url)
                             this.repos.push(dummydata)
@@ -77,15 +80,15 @@ var app = new Vue({
                     .then(
                         axios.spread((repo0response, repo1response, repo2response, repo3response) => {
 
-                                console.log(repo0response)
+                                console.log(repo3response)
                                 for(var i=0;i<this.repos.length;i++){
-                                    if(this.repos[i].name=repo[0]) {
+                                    if(this.repos[i].name==repo[0]) {
                                         this.repos[i].languages=repo0response.data
-                                    } else if(this.repos[i].name=repo[1]) {
+                                    } else if(this.repos[i].name==repo[1]) {
                                         this.repos[i].languages=repo1response.data
-                                    } else if(this.repos[i].name=repo[2]) {
+                                    } else if(this.repos[i].name==repo[2]) {
                                         this.repos[i].languages=repo2response.data
-                                    } else if(this.repos[i].name=repo[3]) {
+                                    } else if(this.repos[i].name==repo[3]) {
                                         this.repos[i].languages=repo3response.data
                                     }
                                 }
