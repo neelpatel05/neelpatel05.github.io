@@ -125,7 +125,7 @@
                                 <span class="card-title" >{{post.name}}</span>
                                 <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
                                 <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                                <p v-else style="margin-top:10px">There is no description available for this repository</p></div>
+                                <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
                                 <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                               </div>
                             </div>
@@ -140,7 +140,7 @@
                                 <span class="card-title" >{{post.name}}</span>
                                   <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
                                   <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                                  <p v-else style="margin-top:10px">There is no description available for this repository</p></div>
+                                  <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
                                   <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                                   <p class="badge badge-secondary" id="commits">commits : {{post.numberofcommits}}</p>
                                   <br>
@@ -156,7 +156,7 @@
                 <tr>
                   <td>
                     <div style="margin: 30px 0px 20px 0px">
-                      made with<img alt="Chai" src="files/chai.webp" id="chai" width="4%" style="margin-bottom: 6px">chai
+                      made with<img alt="Chai" src="files/chai.webp" id="chai" width="4%" style="margin-bottom: 6px">chai <span class="badge badge-danger">{{this.time}} ms</span>
                     </div>
                   </td>
                 </tr>

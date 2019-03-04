@@ -1,5 +1,3 @@
-var globaldata;
-
 var app = new Vue({
     el: '#app',
     created() {
@@ -44,5 +42,5 @@ var app = new Vue({
             });
         }
     }
-  })
+})
 
