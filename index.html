@@ -29,30 +29,19 @@
   <link href="css/style.css" rel="stylesheet">
   <title>Neel Patel</title>
 
-  <script>
-    window.addEventListener('load', async e => {
-      if ('serviceWorker' in navigator) {
-          try {
-              navigator.serviceWorker.register('serviceworker.js');
-          } catch (error) {
-              console.log('error');
-          }
-      }
-    });
-  </script>
 </head>
 <body>
   <div class="container" id="container" role="main">
     <table id="table" class="table-responsive" border="0" align="center" role="contentinfo">
       <tbody>
           <tr>
-              <td><img src="files/neel.webp" alt="Profile Image" id="profileimg"></td>
+              <td><img  id="profileimg" src="files/neel-png.png" alt="Profile Image"></td>
           </tr>
         <tr>
           <td>
             <p align="center"><p id="name">Neel Patel</p>
             Email:
-            <font style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;<p>(<span onclick="unscrambleEmail()">unscramble</span>)&nbsp;(Get your PGP key <span onclick="copyToClipboard()">here</span>)</font>
+            <font style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;<p>(<span onclick="unscrambleEmail()">unscramble</span>)&nbsp;Get your PGP key <span onclick="copyToClipboard()">here</span></font>
             </p>
             <table width="100%" align="center" border="0">
               <tbody>
@@ -156,7 +145,7 @@
                 <tr>
                   <td>
                     <div style="margin: 30px 0px 20px 0px">
-                      made with<img alt="Chai" src="files/chai.webp" id="chai" width="4%" style="margin-bottom: 6px">chai <span class="badge badge-danger">{{this.time}} ms</span>
+                      made with<img id="chai" alt="Chai" src="files/chai-png.png" width="4%" style="margin-bottom: 6px">chai <span class="badge badge-danger">{{this.time}} ms</span>
                     </div>
                   </td>
                 </tr>

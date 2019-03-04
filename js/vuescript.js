@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     created() {
-        this.fetchData();	
+        // this.fetchData();	
     },
     data: {
       posts:[],
