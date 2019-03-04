@@ -67,7 +67,6 @@ var app = new Vue({
                             }
                             languagesurl.push(reporesponse.data[i].languages_url)
                             this.repos.push(dummydata)
-                            // console.log(languagesurl)
                         }
                     }
                     console.log(languagesurl)
@@ -102,6 +101,7 @@ var app = new Vue({
                 .catch((eventerror)=>{
                     console.log(eventerror)
                     document.getElementById("events").style="display:none";
+                    document.getElementById("word").style="display:none";
                     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
                     this.time=loadTime
                 })
