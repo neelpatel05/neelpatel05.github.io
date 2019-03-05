@@ -22,6 +22,7 @@ var app = new Vue({
                     this.time=loadTime
                     
                     //Event Response
+                    console.log(reporesponse)
                     console.log(eventresponse.headers["x-ratelimit-remaining"])
                     console.log(reporesponse.headers["x-ratelimit-remaining"])
                     for(var i=0;i<5;i++){
@@ -53,11 +54,11 @@ var app = new Vue({
                     }
                     
                     //Repo Event
-                    var repo=["graduate-admission","eAttend","github-profile-ios","github-profile-android"]
+                    var repo=["eAttend","github-profile-android","github-profile-ios","graduate-admission","onlineMusicPlayer","terminal-bot"]
                     var languagesurl=[]
                     for(var i=0;i<reporesponse.data.length;i++){
                         reponame=reporesponse.data[i].name
-                        if(reponame==repo[0] || reponame==repo[1] || reponame==repo[2] || reponame==repo[3]){
+                        if(reponame==repo[0] || reponame==repo[1] || reponame==repo[2] || reponame==repo[3] || reponame==repo[4] || reponame==repo[5]){
                             var dummydata={
                                 "name":reponame,
                                 "description":reporesponse.data[i].description,
@@ -74,10 +75,12 @@ var app = new Vue({
                         axios.get(languagesurl[0]),
                         axios.get(languagesurl[1]),
                         axios.get(languagesurl[2]),
-                        axios.get(languagesurl[3])
+                        axios.get(languagesurl[3]),
+                        axios.get(languagesurl[4]),
+                        axios.get(languagesurl[5])
                     ])
                     .then(
-                        axios.spread((repo0response, repo1response, repo2response, repo3response) => {
+                        axios.spread((repo0response, repo1response, repo2response, repo3response,repo4response,repo5response) => {
 
                                 console.log(repo3response)
                                 for(var i=0;i<this.repos.length;i++){
@@ -89,6 +92,10 @@ var app = new Vue({
                                         this.repos[i].languages=repo2response.data
                                     } else if(this.repos[i].name==repo[3]) {
                                         this.repos[i].languages=repo3response.data
+                                    } else if(this.repos[i].name==repo[4]) {
+                                        this.repos[i].languages=repo4response.data
+                                    } else if(this.repos[i].name==repo[5]) {
+                                        this.repos[i].languages=repo5response.data
                                     }
                                 }
                                 console.log(this.repos)
