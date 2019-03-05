@@ -43,16 +43,6 @@ function scramble1(){
     }, 75);
 }
 
-function copyToClipboard(){
-    var dummy = document.createElement("input");
-    document.body.appendChild(dummy);
-    dummy.setAttribute('value', data.pgpkey);
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
-    alert("PGP key copied to clipboard!")
-}
-
 function unscrambleEmail(){
     var x = 0;
     var email = document.getElementById("email").textContent
