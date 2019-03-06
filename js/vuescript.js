@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#table',
     created() {
-        // this.fetchData();
+        this.fetchData();
     },
     data: {
       posts:[],
@@ -22,9 +22,6 @@ var app = new Vue({
                     this.time=loadTime
                     
                     //Event Response
-                    console.log(reporesponse)
-                    console.log(eventresponse.headers["x-ratelimit-remaining"])
-                    console.log(reporesponse.headers["x-ratelimit-remaining"])
                     for(var i=0;i<5;i++){
                         var name=eventresponse.data[i].repo.name.split("/")
                         var createdate=eventresponse.data[i].created_at.split("T")
@@ -70,7 +67,6 @@ var app = new Vue({
                             this.repos.push(dummydata)
                         }
                     }
-                    console.log(languagesurl)
                     axios.all([
                         axios.get(languagesurl[0]),
                         axios.get(languagesurl[1]),
@@ -82,7 +78,7 @@ var app = new Vue({
                     .then(
                         axios.spread((repo0response, repo1response, repo2response, repo3response,repo4response,repo5response) => {
 
-                                console.log(repo3response)
+                              
                                 for(var i=0;i<this.repos.length;i++){
                                     if(this.repos[i].name==repo[0]) {
                                         this.repos[i].languages=repo0response.data
@@ -98,7 +94,7 @@ var app = new Vue({
                                         this.repos[i].languages=repo5response.data
                                     }
                                 }
-                                console.log(this.repos)
+                               
                             }
                         )
                     ).catch((error) => {
