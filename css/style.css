@@ -28,6 +28,14 @@
     -o-user-select: none;
     user-select: none;
   }
+
+  #fingerprint{
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+  }
   
   #name{
     font-size: 2rem;

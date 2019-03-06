@@ -52,7 +52,7 @@
             Email:
             <font style="display:inline;"><a href="mailto: neel.patel6573@gmail.com" id="email">neel.patel6573@gmail.com</a>&nbsp;<p>(<span onclick="unscrambleEmail()">unscramble</span>)&nbsp;</font>
             </p>
-            <p style="display:inline;">Fingerprint: 1936 3682 C430 80C2 F6CD C94E 9F34 F74B 7235 1840<p>Get your PGP key <span><a href="files/pgp-public-key.txt">here</a></span></p></p>
+            <p style="display:inline;" id="fingerprint">1936 3682 C430 80C2 F6CD C94E 9F34 F74B 7235 1840<p>Get your PGP key <span><a href="files/pgp-public-key.txt">here</a></span></p></p>
             <table width="100%" align="center" border="0">
               <tbody>
                 <tr >
@@ -82,21 +82,16 @@
                     <div class="card-group">
                       <div class="row">
                         <div class="column" v-for="repo in repos">
-                          <!-- <div class="card" style="vertical-align: middle">
-                            <a><span>{{repo}}</span></a>
-                          </div> -->
                           <div class="col s12 m6">
                               <div class="card blue-grey darken-1">
                                 <div class="card-content white-text">
                                   <div id="card-title"> 
                                   <span class="card-title" >{{repo.name}}</span><br>
                                   <p v-for="(number, language) in repo.languages" :key="language" class="badge badge-secondary" style="margin-top:10px;margin-left:10px;display: inline;">
-                                      {{language}}
-                                    </p>
-                                  <!-- <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p> -->
+                                    {{language}}
+                                  </p>
                                   <p v-if="repo.description" style="margin-top:10px">{{repo.description}}</p>
                                   <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
-                                  <!-- <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p> -->
                                 </div>
                               </div>
                             </div>
