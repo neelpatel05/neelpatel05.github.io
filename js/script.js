@@ -2,8 +2,7 @@ data={
     name:'Neel Patel',
     email:'neel.patel6573@gmail.com',
     detail1:'I am a final year Bachelors student in Information Technology at <a href="http://bvmengineering.ac.in/">Birla Vishvakarma Mahavidyalaya</a>. My primary interests are in Networking and Security, Backend Development and a little bit in Machine Learning.',
-    detail2:'I am currently working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> for a period of 4 months. At OpenEyes, I am working with a team-mate to develop a ML based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. For our project, we are using <span>Flask</span>, <span>Python</span>, <span>AWS</span> for Backend and <span>ResNet50</span>, <span>Yolo3</span> models for Transfer Learning to predict the frames.',
-
+    detail2:'I am currently working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> for a period of 4 months. At OpenEyes, I am working with a team-mate to develop a ML based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. For our project, we are using <span>Flask</span>, <span>Python</span>, <span>AWS</span> for Backend and <span>ResNet50</span> model for Transfer Learning to predict the frames.'
 }
 
 window.addEventListener('load', async e => {
@@ -51,7 +50,7 @@ function unscrambleEmail(){
             window.clearInterval(intervalID);
             document.getElementById("email").innerHTML = data.email
         }
-    }, 75);
+    }, 100);
 }
 
 function browser(){

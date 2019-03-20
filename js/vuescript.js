@@ -10,7 +10,6 @@ var app = new Vue({
     },
     methods:{
         fetchData() {
-
             axios.all([
                 axios.get('https://api.github.com/users/neelpatel05/events'),
                 // axios.get('https://api.github.com/users/neelpatel05/repos')
@@ -20,6 +19,7 @@ var app = new Vue({
                     //Network Time
                     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
                     this.time=loadTime
+                    console.log(this.time)
                     //Event Response
                     for(var i=0;i<5;i++){
                         var name=eventresponse.data[i].repo.name.split("/")
@@ -27,7 +27,6 @@ var app = new Vue({
                         var createdate1=createdate[0].split("-")
                         var createdate2=createdate1.reverse().join("-")
                         if (eventresponse.data[i].type == "PushEvent"){
-                            
                             var data={
                                 "created_at":createdate2,
                                 "name":name[1],
@@ -49,7 +48,7 @@ var app = new Vue({
                         this.posts.push(data)
                     }
                     
-                    //Repo Event
+                    // Repo Event
                     // var repo=["eAttend","github-profile-android","github-profile-ios","graduate-admission","onlineMusicPlayer","terminal-bot"]
                     // var languagesurl=[]
                     // for(var i=0;i<reporesponse.data.length;i++){
