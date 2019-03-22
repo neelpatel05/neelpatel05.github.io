@@ -19,7 +19,6 @@ var app = new Vue({
                     //Network Time
                     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
                     this.time=loadTime
-                    console.log(this.time)
                     //Event Response
                     for(var i=0;i<5;i++){
                         var name=eventresponse.data[i].repo.name.split("/")
@@ -46,7 +45,6 @@ var app = new Vue({
                             }
                         }
                         this.posts.push(data)
-                        console.log(this.posts)
                     }
                     
                     // Repo Event
