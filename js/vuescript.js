@@ -46,6 +46,7 @@ var app = new Vue({
                             }
                         }
                         this.posts.push(data)
+                        console.log(this.posts)
                     }
                     
                     // Repo Event
