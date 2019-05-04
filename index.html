@@ -80,14 +80,14 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="card-group">
+                    <div class="card-group"  v-for="repo in repos">
                       <div class="row">
-                        <div class="column" v-for="repo in repos">
+                        <div class="column">
                           <div class="col s12 m6">
                               <div class="card blue-grey darken-1">
                                 <div class="card-content white-text">
                                   <div id="card-title">
-                                  <span class="card-title" >{{repo.name}}</span><br>
+                                  <span class="card-title">{{repo.name}}</span><br>
                                   <p v-for="(number, language) in repo.languages" :key="language" class="badge badge-info" style="margin-top:10px;margin-left:10px;display: inline;">
                                     {{language}}
                                   </p>
