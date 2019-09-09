@@ -1,8 +1,8 @@
 data={
     name:'Neel Patel',
     email:'nnpatel@terpmail.umd.edu',
-    detail1:'I am a final year Bachelors student in Information Technology at <a href="http://bvmengineering.ac.in/">Birla Vishvakarma Mahavidyalaya</a>. My primary interests are in Networking and Security, Backend Engineering and some what in Machine Learning.',
-    detail2:'I was working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> from Jan 2019 - April 2019. At OpenEyes, I was working with a team-mate to develop a ML based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. For our project, we were using <span>Flask</span>, <span>Python</span>, <span>MongoDB</span> for Backend and <span>ResNet50</span>, <span>dlib</span> to predict the frames.'
+    detail1:'I am a Graduate student mastering in Cybersecurity from <a href="https://eng.umd.edu/">A. James Clark School of Engineering</a> - <a href="https://umd.edu/">University of Maryland, College Park</a>. My primary interests are laying security in softwares, networks, infromation, penetration testing, finding vulnerabilities and in Machine Learning.',
+    detail2:'I was working as an "Intern-Product and Project" at <a href="http://www.theopeneyes.com/">OpenEyes Technologies, Inc</a> from Jan 2019 - April 2019. At OpenEyes, I was working with a team-mate to develop a Machine Learning based project named <a href="https://github.com/neelpatel05/anti-smokify">"Anti-Smokify"</a> to identify smoking scenes from videos and movies. '
 }
 
 window.addEventListener('load', async e => {
