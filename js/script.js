@@ -11,7 +11,6 @@ window.addEventListener('load', async e => {
 window.onload = function(){
     browser()
     console.log("Hey there developer!")
-    scramble1()
 }
 
 function browser(){
