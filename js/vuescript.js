@@ -48,7 +48,7 @@ var app = new Vue({
                     }
                     
                     //Repo Event
-                    var repo=["bruteforce-zip","graduate-admission","house-lannister","json-web-tokens","not-hot-dog","periodic-table-api-go"]
+                    var repo=["bruteforce-zip","tiny-web-server","parallel-crypto","tiny-32bit-kernel","eye-tracking","periodic-table-api"]
                     var languagesurl=[]
                     for(var i=0;i<reporesponse.data.length;i++){
                         reponame=reporesponse.data[i].name
