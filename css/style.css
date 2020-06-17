@@ -18,8 +18,9 @@
     color: #ff0000;
     text-decoration:none;
   }
+
   body,td,th {
-    font-family: 'Avenir', Verdana, Helvetica, sans-serif;
+    font-family: 'Work Sans', Avenir, sans-serif;
     overflow-x: hidden;
     font-size: 16px;
     -webkit-user-select: none;
@@ -87,7 +88,6 @@
     }
     #created_at2{
       display: inline;
-      float: right;
     }
   }
 

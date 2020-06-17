@@ -20,14 +20,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/jp2" sizes="342*340" href="files/neel.webp">
   <link rel="apple-touch-icon" type="image/gif" sizes="342*340" href="file/neel.gif">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
 
-  <script src="js/jquery.min.js"></script>
-  <link href="css/bootsrap.min.css" rel="stylesheet">
-  <script src="js/bootstrap.min.js" ></script>
-  <script src="js/bootstrap.bundle.min.js" ></script>
-  <script src="js/scramble.min.js"></script>
-  <script src="js/vue.min.js"></script>
-  <script src="js/axios.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <link href="./css/bootsrap.min.css" rel="stylesheet">
+  <script src="./js/bootstrap.min.js" ></script>
+  <script src="./js/bootstrap.bundle.min.js" ></script>
+  <script src="./js/scramble.min.js"></script>
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/axios.min.js"></script>
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86734910-3"></script>
@@ -94,8 +95,8 @@
                                 <div class="card-content white-text">
                                   <div id="card-title">
                                   <span class="card-title">{{repo.name}}</span><br>
-                                  <p v-for="(number, language) in repo.languages" :key="language" class="badge badge-info" style="margin-top:10px;margin-left:10px;display: inline;">
-                                    {{language}}
+                                  <p class="badge badge-info" style="margin-left:10px;display: inline;">
+                                    {{repo.language}}
                                   </p>
                                   <p v-if="repo.description" style="margin-top:10px">{{repo.description}}</p>
                                   <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>

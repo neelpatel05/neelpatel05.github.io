@@ -12,7 +12,7 @@ var app = new Vue({
         fetchData() {
             axios.all([
                 axios.get('https://api.github.com/users/neelpatel05/events'),
-                axios.get('https://api.github.com/users/neelpatel05/repos')
+                axios.get('https://api.github.com/users/neelpatel05/repos?per_page=100')
             ])
             .then(
                 axios.spread((eventresponse,reporesponse) => {
@@ -48,19 +48,17 @@ var app = new Vue({
                     }
                     
                     //Repo Event
-                    var repo=["bruteforce-zip","tiny-web-server","parallel-crypto","tiny-32bit-kernel","eye-tracking","periodic-table-api"]
-                    var languagesurl=[]
-                    for(var i=0;i<reporesponse.data.length;i++){
+                    var repo=["antismokify-gpu","bruteforce-zip","rooted-MiniShare","tiny-web-server","by-passing-ASLR","offset-finder","seed-labs","ROP"]
+        
+                    for(var i=0;i<reporesponse.data.length;i++) {
                         reponame=reporesponse.data[i].name
-                        if(reponame==repo[0] || reponame==repo[1] || reponame==repo[2] || reponame==repo[3] || reponame==repo[4] || reponame==repo[5]){
+                        if(reponame==repo[0] || reponame==repo[1] || reponame==repo[2] || reponame==repo[3] || reponame==repo[4] || reponame==repo[5] || reponame==repo[6]) {
                             var dummydata={
                                 "name":reponame,
                                 "description":reporesponse.data[i].description,
                                 "url":reporesponse.data[i].html_url,
                                 "language":reporesponse.data[i].language,
-                                "languages":{}
                             }
-                            languagesurl.push(reporesponse.data[i].languages_url)
                             this.repos.push(dummydata)
                         }
                     }
