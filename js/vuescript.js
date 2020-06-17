@@ -64,38 +64,6 @@ var app = new Vue({
                             this.repos.push(dummydata)
                         }
                     }
-                    axios.all([
-                        axios.get(languagesurl[0]),
-                        axios.get(languagesurl[1]),
-                        axios.get(languagesurl[2]),
-                        axios.get(languagesurl[3]),
-                        axios.get(languagesurl[4]),
-                        axios.get(languagesurl[5])
-                    ])
-                    .then(
-                        axios.spread((repo0response, repo1response, repo2response, repo3response,repo4response,repo5response) => {
-
-                              
-                                for(var i=0;i<this.repos.length;i++){
-                                    if(this.repos[i].name==repo[0]) {
-                                        this.repos[i].languages=repo0response.data
-                                    } else if(this.repos[i].name==repo[1]) {
-                                        this.repos[i].languages=repo1response.data
-                                    } else if(this.repos[i].name==repo[2]) {
-                                        this.repos[i].languages=repo2response.data
-                                    } else if(this.repos[i].name==repo[3]) {
-                                        this.repos[i].languages=repo3response.data
-                                    } else if(this.repos[i].name==repo[4]) {
-                                        this.repos[i].languages=repo4response.data
-                                    } else if(this.repos[i].name==repo[5]) {
-                                        this.repos[i].languages=repo5response.data
-                                    }
-                                }
-                            }
-                        )
-                    ).catch((error) => {
-                        console.log(error)
-                    });
                 }))
                 .catch((eventerror)=>{
                     console.log(eventerror)
