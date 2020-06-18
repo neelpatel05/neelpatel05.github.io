@@ -30,7 +30,6 @@ var app = new Vue({
                                 "created_at":createdate2,
                                 "name":name[1],
                                 "url":eventresponse.data[i].repo.url,
-                                "description":eventresponse.data[i].payload.description,
                                 "type":eventresponse.data[i].type,
                                 "numberofcommits":eventresponse.data[i].payload.commits.length,
                                 "commits":eventresponse.data[i].payload.commits
@@ -40,13 +39,13 @@ var app = new Vue({
                                 "created_at":createdate2,
                                 "name":name[1],
                                 "url":eventresponse.data[i].repo.url,
-                                "description":eventresponse.data[i].payload.description,
                                 "type":eventresponse.data[i].type
                             }
                         }
                         this.posts.push(data)
+
                     }
-                    
+                    console.log(this.posts)
                     //Repo Event
                     var repo=["antismokify-gpu","bruteforce-zip","rooted-MiniShare","tiny-web-server","by-passing-ASLR","offset-finder","seed-labs","ROP"]
         

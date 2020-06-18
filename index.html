@@ -123,25 +123,24 @@
                         <div class="col s12 m6">
                           <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
-                              <div id="card-title"><span class="badge badge-info" style="font-size: 0.9rem">{{post.type}}</span> @ 
-                              <span class="card-title" >{{post.name}}</span>
-                              <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
-                              <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                              <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
-                              <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
+                              <div id="card-title">
+                                <span class="badge badge-info" style="font-size: 0.9rem">{{post.type}}</span> @ 
+                                <span class="card-title" >{{post.name}}</span>
+                                <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
+                                <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                     </div>
-                    <div v-if="post.type == 'PushEvent'" id="PushEvent" class="row" style="margin-top:15px;width: 100%;">
+                      <div v-if="post.type == 'PushEvent'" id="PushEvent" class="row" style="margin-top:15px;width: 100%;">
                         <div class="col s12 m6">
                           <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
-                              <div id="card-title"><span class="badge badge-success" style="font-size: 0.9rem">{{post.type}}</span> @ 
-                              <span class="card-title" >{{post.name}}</span>
+                              <div id="card-title">
+                                <span class="badge badge-success" style="font-size: 0.9rem">{{post.type}}</span> @ 
+                                <span class="card-title" >{{post.name}}</span>
                                 <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
-                                <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                                <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
                                 <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                                 <p class="badge badge-secondary" id="commits">commits : {{post.numberofcommits}}</p>
                                 <br>
@@ -149,8 +148,10 @@
                                     <li v-for="commit in post.commits" style="text-align: left">{{commit.message}}</li>
                                 </ol>
                               </div>
+                            </div>
                           </div>
                         </div>
+                      </div>
 					</div>
 					<div v-if="post.type == 'IssuesEvent'" id="IssueEvent" class="row" style="margin-top:15px;width: 100%;">
                         <div class="col s12 m6">
@@ -159,8 +160,7 @@
                               <div id="card-title"><span class="badge badge-info" style="font-size: 0.9rem">{{post.type}}</span> @ 
                               <span class="card-title" >{{post.name}}</span>
                                 <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
-                                <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                                <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
+                              </div>
                                 <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                               </div>
                           </div>
@@ -173,8 +173,6 @@
                               <div id="card-title"><span class="badge badge-info" style="font-size: 0.9rem">{{post.type}}</span> @ 
                               <span class="card-title" >{{post.name}}</span>
                                 <p class="badge badge-secondary" style="float:right" id="created_at1">{{post.created_at}}</p>
-                                <p v-if="post.description" style="margin-top:10px">{{post.description}}</p>
-                                <p v-else style="margin-top:10px">There is no description available for this repository on GitHub</p></div>
                                 <p class="badge badge-secondary" id="created_at2">{{post.created_at}}</p>
                               </div>
                           </div>
