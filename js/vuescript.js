@@ -11,8 +11,8 @@ var app = new Vue({
     methods:{
         fetchData() {
             axios.all([
-                axios.get('https://api.github.com/users/neelpatel05/events'),
-                axios.get('https://api.github.com/users/neelpatel05/repos?per_page=100')
+                //axios.get('https://api.github.com/users/neelpatel05/events'),
+                //axios.get('https://api.github.com/users/neelpatel05/repos?per_page=100')
             ])
             .then(
                 axios.spread((eventresponse,reporesponse) => {
