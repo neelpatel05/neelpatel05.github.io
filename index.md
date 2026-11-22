@@ -1,7 +1,3 @@
-[neel.patel6573@gmail.com](mailto:neel.patel6573@gmail.com) | +1 (240)-505-8107
-
-[LinkedIn](https://www.linkedin.com/in/patelneeln) | [GitHub](https://github.com/neelpatel05)
-
 ## Experience
 
 ### Security Engineer II | Amazon
