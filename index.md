@@ -1,15 +1,8 @@
-
-# Neelkumar Patel
-
-**Security Engineer | Product Security | Offensive Security | Security Automation & LLMs**
-
 [neel.patel6573@gmail.com](mailto:neel.patel6573@gmail.com) | +1 (240)-505-8107
 
 [LinkedIn](https://www.linkedin.com/in/patelneeln) | [GitHub](https://github.com/neelpatel05)
 
----
-
-## EXPERIENCE
+## Experience
 
 ### Security Engineer II | Amazon
 *August 2024 – Present*
@@ -29,9 +22,7 @@
 - Mentored and guided three security engineers, significantly enhancing the team's technical capabilities in conducting advanced security assessments.
 - Authored and maintained internal penetration testing methodologies and technical guidance, accelerating onboarding and enabling new engineers to contribute effectively from their first assessment.
 
----
-
-## EDUCATION
+## Education
 
 ### Master of Engineering, Cybersecurity
 **University of Maryland, College Park, USA**  
@@ -50,27 +41,12 @@
 
 ---
 
-## CERTIFICATIONS
+## Certifications
 
 - [Offensive Security Web Expert (OSWE)](https://www.credential.net/439a9b48-088d-426a-9794-2a7ec98481e6)
 - [Offensive Security Certified Professional (OSCP)](https://www.credential.net/435e9199-f118-4a00-8e9f-6b4629140d58)
 
----
-
-## TECHNICAL SKILLS
-
-| Category | Skills |
-|---|---|
-| Programming Languages | Python, C, Java, Go, PowerShell, C#/.NET |
-| Databases & Operating Systems | SQL, NoSQL, PostgreSQL, MongoDB, Linux, Kali Linux, Windows |
-| Cloud & Infrastructure Security | AWS, Docker, Kubernetes, OpenSearch, GitHub |
-| Security Methodologies | Threat Modeling (PASTA, STRIDE), Penetration Testing, Reverse Engineering, Vulnerability Management and Remediation (VMR) |
-| Security Tools | Nmap, Wireshark, Metasploit, John the Ripper, Hashcat, Dig, Nikto, Gobuster |
-| Low-Level Analysis | x86 (32-bit and 64-bit), ARM, MIPS, Ghidra, Radare2, Binutils, GDB |
-
----
-
-## PROJECTS
+## Projects
 
 ### Analysis of Cherokee Web Server Exploitation
 *Technologies: C, IA-32, Python, GNU Debugger*
@@ -84,5 +60,3 @@
 - Reverse-engineered TP-Link firmware binaries to investigate security vulnerabilities and understand embedded system security.
 - Collaborated with a team of five to analyze firmware components and explore potential attack surfaces.
 - Demonstrated firmware modification techniques in a controlled research environment to study embedded device security.
-
----
