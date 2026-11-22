@@ -1,3 +1,5 @@
+# Resume
+
 ## Experience
 
 ### Security Engineer II | Amazon
@@ -17,6 +19,8 @@
 - Executed 75+ comprehensive penetration testing assessments across Web, Mobile, IoT, Cloud, and Desktop platforms, consistently achieving high customer satisfaction with a 92% Net Promoter Score (NPS).
 - Mentored and guided three security engineers, significantly enhancing the team's technical capabilities in conducting advanced security assessments.
 - Authored and maintained internal penetration testing methodologies and technical guidance, accelerating onboarding and enabling new engineers to contribute effectively from their first assessment.
+
+--- 
 
 ## Education
 
@@ -41,6 +45,8 @@
 
 - [Offensive Security Web Expert (OSWE)](https://www.credential.net/439a9b48-088d-426a-9794-2a7ec98481e6)
 - [Offensive Security Certified Professional (OSCP)](https://www.credential.net/435e9199-f118-4a00-8e9f-6b4629140d58)
+
+---
 
 ## Projects
 
