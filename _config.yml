@@ -1,2 +1,7 @@
-title: Neelkumar Patel
+title: Learned Lessons
+email: neel.patel6573@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  neelpatel05
+
+# Build settings
 theme: minima
